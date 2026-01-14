@@ -3,3 +3,4 @@ uvicorn
 starlette
 python-multipart
 itsdangerous
+jinja2
