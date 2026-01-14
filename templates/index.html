@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FastAPI Project</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  {% if page != 'home' %}
+    <h1>FastAPI Project</h1>
+  {% endif %}
+
+{% if page == 'register' %}
+  <div id='register' class='page'>
+    {% if msg %}
+      <p class="error-msg">{{ msg }}</p>
+    {% endif %}
+    <form method="POST" action='/register'>
+      <input type="email" name="email" placeholder="Email" autocomplete="username" required>
+      <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+      <button type="submit">Register</button>
+    </form>
+    <p class="login-link">Have an account? <a href="/login">Login</a></p>
+  </div>
+
+{% endif %}
+{% if page == 'login' %}
+  <div id='login' class='page'>
+    {% if msg %}
+      <p class="error-msg">{{ msg }}</p>
+    {% endif %}
+    <form method="POST" action='/login'>
+      <input type="text" name="email" placeholder="Email" autocomplete="username" required>
+      <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p class="login-link">Don't have an account? <a href="/">Register</a></p>
+  </div>
+
+{% endif %}
+{% if page == 'home' %}
+  <div id='home' class='page'>
+    <h1>Welcome to Home</h1>
+    {% if msg %}
+      <p class="success-msg">{{ msg }}</p>
+    {% endif %}
+    <a href="/logout" class="logout-btn">Logout</a>
+  </div>
+
+{% endif %}
+</body>
+</html>

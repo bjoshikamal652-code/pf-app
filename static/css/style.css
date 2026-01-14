@@ -1,0 +1,129 @@
+body {
+  font-family: arial, sans-serif;
+  background: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  margin-top: 0;
+}
+
+.page {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: arial, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f0f4ff;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #333;
+}
+
+button[type="submit"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: arial, sans-serif;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.success-msg {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.logout-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #333;
+}
+
+#register form br {
+  display: none;
+}
+
+#login form br {
+  display: none;
+}
+
+#home h1 {
+  margin-bottom: 60px;
+}
+
+#home p {
+  color: black;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 15px;
+}
+
+#home .page {
+  max-width: 100%;
+}
